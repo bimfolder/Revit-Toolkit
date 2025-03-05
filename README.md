@@ -1,34 +1,32 @@
-Revit Tool Manager
-🚀 A PyRevit-based app for managing and organizing Revit plugins efficiently.
+# **Revit Tool Manager**
+🚀 *A PyRevit-based app for managing and organizing Revit plugins efficiently.*
 
-Overview
-The Revit Tool Manager simplifies the process of enabling, disabling, and organizing PyRevit plugins within the Revit ribbon. This tool is designed to help users streamline their workflow and maintain a clutter-free Revit environment.
+![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/revit-tool-manager?color=blue)
+![GitHub stars](https://img.shields.io/github/stars/yourusername/revit-tool-manager?style=social)
+![GitHub issues](https://img.shields.io/github/issues/yourusername/revit-tool-manager)
 
-Features
-✅ Enable or disable PyRevit plugins easily
-✅ Organize plugins in the Revit ribbon with a simple UI
-✅ Reset toolbar settings when needed
-✅ Check for updates and clean up the cache
-✅ Lightweight, fast, and optimized for Revit users
+---
 
-Installation
-Clone this repository:
-sh
-Copy
-Edit
-git clone https://github.com/yourusername/revit-tool-manager.git
-Follow the setup guide in the documentation.
-Usage
-Launch the Revit Tool Manager from the PyRevit ribbon.
-Select the plugins you want to enable or disable.
-Rearrange them as needed for an optimized workflow.
-Use the Reset Toolbar button if you need to restore default settings.
-Click Check Updates and Cleanup Cache to ensure optimal performance.
-Screenshots (Optional)
-(Add images or GIFs of the tool in action)
+## 🔹 Overview
+The **Revit Tool Manager** simplifies the process of enabling, disabling, and organizing PyRevit plugins within the Revit ribbon. It provides an intuitive UI for better control over installed tools, ensuring a more efficient workflow.
 
-Contributing
-Contributions are welcome! Feel free to submit pull requests or report issues.
+---
 
-License
-MIT License – Free to use and modify.
+## ✨ Features
+✅ Enable or disable PyRevit plugins with one click  
+✅ Drag & drop to organize plugins in the Revit ribbon  
+✅ Reset toolbar settings to default  
+✅ Check for updates and clean up cache  
+✅ Lightweight, fast, and optimized for Revit users  
+
+---
+
+## 🛠 Installation
+### **Prerequisites**
+- **Revit 2022+**
+- **PyRevit installed**
+
+### **Steps**
+1. Clone this repository:  
+   ```sh
+   git clone https://github.com/yourusername/revit-tool-manager.git

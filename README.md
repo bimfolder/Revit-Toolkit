@@ -4,7 +4,7 @@
 ---
 
 ## 🔹 Overview
-The **Revit Tool Manager** simplifies the process of enabling, disabling, and organizing PyRevit plugins within the Revit ribbon. It provides an intuitive UI for better control over installed tools, ensuring a more efficient workflow.
+The **Revit Toolkit** simplifies the process of enabling, disabling, and organizing PyRevit plugins within the Revit ribbon. It provides an intuitive UI for better control over installed tools, ensuring a more efficient workflow.
 
 ---
 

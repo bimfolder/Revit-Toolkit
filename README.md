@@ -1,4 +1,4 @@
-# **ToolKit For Revit Plugs**
+# **ToolKit For Revit Plugins**
 🚀 *A PyRevit-based app for managing and organizing Revit plugins efficiently.*
 
 ---

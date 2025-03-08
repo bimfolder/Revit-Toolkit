@@ -1,0 +1,98 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manage Toolkit" Height="900" Width="1800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="820" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="800"/>
+        </Grid.ColumnDefinitions>
+<!-- Button-1 -->
+        <Button x:Name="Button1" Grid.Row="0" Grid.Column="1"
+                Height="33" Width="160" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold" Margin="0,0,0,0"
+                Content="Rebuild My Tookit"
+                ToolTip="Refresh the Revit ribbon to match the layout below.">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Foreground" Value="white"/>
+                    <Setter Property="Background" Value="#4f68ae"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#4f68ae"/>
+                            <Setter Property="Background" Value="LightGreen"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+<!-- Button-2 -->
+        <Button x:Name="Button2" Grid.Row="0" Grid.Column="2"
+                Height="33" Width="160" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold" Margin="0,0,0,0"
+                Content="Check For Updates"
+                ToolTip="Ensure the most current version of the app and tools is installed and up to date.">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Foreground" Value="white"/>
+                    <Setter Property="Background" Value="#4f68ae"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#4f68ae"/>
+                            <Setter Property="Background" Value="LightGreen"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+<!-- Button-3 -->
+        <Button x:Name="Button3" Grid.Row="0" Grid.Column="3"
+                Height="33" Width="70" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold" Margin="0,0,0,0"
+                Content="Close"
+                ToolTip="Close the window without making any changes on Revit.">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Foreground" Value="white"/>
+                    <Setter Property="Background" Value="#4f68ae"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#4f68ae"/>
+                            <Setter Property="Background" Value="LightGreen"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+<!-- Webpage -->
+        <WebBrowser x:Name="webBrowser" Grid.Row="1" Grid.ColumnSpan="5" Margin="2"/>
+    </Grid>
+</Window>

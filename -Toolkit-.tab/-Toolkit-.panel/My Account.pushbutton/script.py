@@ -90,7 +90,7 @@ def show_message_with_link():
     image1.Margin = Thickness(2)
     image1.Cursor = Cursors.Hand
     def open_image1_link(sender, args):
-        Process.Start("https://www.bimfolder.com/pySubs_new.asp?pid=1")
+        Process.Start("cmd.exe", "/c start https://www.bimfolder.com/pySubs_new.asp?pid=1")
     image1.MouseLeftButtonUp += open_image1_link
     image2 = Image()
     image2.Source = BitmapImage(Uri("https://www.bimfolder.com/lib/plan_10r.png"))
@@ -99,7 +99,7 @@ def show_message_with_link():
     image2.Margin = Thickness(2)
     image2.Cursor = Cursors.Hand
     def open_image2_link(sender, args):
-        Process.Start("https://www.bimfolder.com/pySubs_new.asp?pid=2")
+        Process.Start("cmd.exe", "/c start https://www.bimfolder.com/pySubs_new.asp?pid=2")
     image2.MouseLeftButtonUp += open_image2_link
     image3 = Image()
     image3.Source = BitmapImage(Uri("https://www.bimfolder.com/lib/plan_30r.png"))
@@ -108,7 +108,7 @@ def show_message_with_link():
     image3.Margin = Thickness(2)
     image3.Cursor = Cursors.Hand
     def open_image3_link(sender, args):
-        Process.Start("https://www.bimfolder.com/pySubs_new.asp?pid=3")
+        Process.Start("cmd.exe", "/c start https://www.bimfolder.com/pySubs_new.asp?pid=3")
     image3.MouseLeftButtonUp += open_image3_link
     image_panel.Children.Add(image1)
     image_panel.Children.Add(image2)

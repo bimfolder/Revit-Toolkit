@@ -3,7 +3,7 @@
     "default_enabled": "True",
     "type": "extension",
     "rocket_mode_compatible": "True",
-    "name": "RToolkit",
+    "name": "BIMFolder",
     "description": "organizes and manages PyRevit plugins",
     "author": "BIMFolder Services",
     "author_profile": "https://www.bimfolder.com",

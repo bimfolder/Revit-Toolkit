@@ -5,7 +5,7 @@ class AboutWindow(forms.WPFWindow):
         forms.WPFWindow.__init__(self, xaml_file_name)
         self.short_version_info.Text = '1.0.1'
         self.pyrevit_subtitle.Text = '(Organizes and manages pyRevit Plugins)'
-        self.pyrevit_engine.Text = 'Running on pyRevit v4.8.13 and Above'
+        self.pyrevit_engine.Text = 'Running on pyRevit v5.0.0 and Above'
         self.copyright_tb.Text = '© 2024 BIMFolder Services'
     def openwiki(self, sender, args):
         script.open_url('https://www.bimfolder.com')

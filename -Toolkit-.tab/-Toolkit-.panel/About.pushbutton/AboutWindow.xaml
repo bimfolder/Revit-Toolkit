@@ -200,7 +200,7 @@
             <StackPanel Grid.Column="1"
                         VerticalAlignment="Center">
                 <ContentControl>
-                    <Image Source="https://www.bimfolder.com/vrserver/jobs/lib/web_logo_top.png" Width="100" Height="100" Stretch="Uniform"/>
+                    <Image Source="https://www.bimfolder.com/lib/Logo_Icon.png" Width="100" Height="100" Stretch="Uniform"/>
                 </ContentControl>
 
                 <TextBlock x:Name="pyrevit_title"
@@ -232,8 +232,6 @@
                            HorizontalAlignment="Center">
                     <Button Content="{DynamicResource Button.Wiki}" FontSize="14"
                             Click="openwiki"/>
-                    <Button Content="{DynamicResource Button.YouTube}" FontSize="14"
-                            Click="openyoutubechannel"/>
                 </WrapPanel>
                 <TextBlock x:Name="copyright_tb"
                            FontSize="12"

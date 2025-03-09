@@ -1,6 +1,7 @@
-import clr
+import clr, System
 clr.AddReference('PresentationCore')
 clr.AddReference('PresentationFramework')
+clr.AddReference('System')
 from System.Windows import Window, WindowStartupLocation
 from System.Windows.Controls import StackPanel, TextBlock, Button, Image, Border, WrapPanel
 from System.Windows.Media import Brushes, FontFamily

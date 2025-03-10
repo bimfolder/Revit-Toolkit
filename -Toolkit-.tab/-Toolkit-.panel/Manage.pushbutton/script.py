@@ -68,7 +68,8 @@ def Upgrade_App(V_loc,V_cur):
                 pb_count += 1
                 pb.title = "Reloading Ribbon ... ... ..."
                 pb.update_progress(pb_count, pb_len)
-                sessionmgr.execute_command('pyrevitcore-pyrevit-pyrevit-tools-reload')
+                sessionmgr.reload_pyrevit()
+                # sessionmgr.execute_command('pyrevitcore-pyrevit-pyrevit-tools-reload')
     if Upd_Act == 2:
         pb_count = 0
         pb_len = 3
@@ -85,7 +86,8 @@ def Upgrade_App(V_loc,V_cur):
                 pb_count += 1
                 pb.title = "Reloading Ribbon ... ... ..."
                 pb.update_progress(pb_count, pb_len)
-                sessionmgr.execute_command('pyrevitcore-pyrevit-pyrevit-tools-reload')
+                sessionmgr.reload_pyrevit()
+                # sessionmgr.execute_command('pyrevitcore-pyrevit-pyrevit-tools-reload')
     if Upd_Act == 3:
         pb_count = 0
         pb_len = 4
@@ -107,7 +109,8 @@ def Upgrade_App(V_loc,V_cur):
                     pb_count += 1
                     pb.title = "Reloading Ribbon ... ... ..."
                     pb.update_progress(pb_count, pb_len)
-                    sessionmgr.execute_command('pyrevitcore-pyrevit-pyrevit-tools-reload')
+                    sessionmgr.reload_pyrevit()
+                    # sessionmgr.execute_command('pyrevitcore-pyrevit-pyrevit-tools-reload')
 def Refresh_Tools():
     pb_count = 0
     pb_len = 3
@@ -132,7 +135,8 @@ def Refresh_Tools():
                 pb_count += 1
                 pb.title = "Reloading Ribbon ... ... ..."
                 pb.update_progress(pb_count, pb_len)
-                sessionmgr.execute_command('pyrevitcore-pyrevit-pyrevit-tools-reload')
+                sessionmgr.reload_pyrevit()
+                # sessionmgr.execute_command('pyrevitcore-pyrevit-pyrevit-tools-reload')
             else:
                 forms.alert(stderr_b, ok=True, yes=False, no=False)
                 sys.exit()

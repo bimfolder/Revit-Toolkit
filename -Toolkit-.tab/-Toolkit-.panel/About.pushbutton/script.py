@@ -3,7 +3,7 @@ from pyrevit import forms, script
 class AboutWindow(forms.WPFWindow):
     def __init__(self, xaml_file_name):
         forms.WPFWindow.__init__(self, xaml_file_name)
-        self.short_version_info.Text = '1.0.5'
+        self.short_version_info.Text = '1.0.6'
         self.pyrevit_subtitle.Text = '(Organizes and manages pyRevit Plugins)'
         self.pyrevit_engine.Text = 'Running on pyRevit v5.0.0 and Above'
         self.copyright_tb.Text = '© 2024 BIMFolder Services'

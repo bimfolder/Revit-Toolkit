@@ -167,7 +167,7 @@ if UID != "":
             Refresh_Tools()
         def run_Button2(self, sender, args):
             window.Close ()
-            S_curr = "https://github.com/bimfolder/Revit-Toolkit/tree/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py"
+            S_curr = "https://raw.githubusercontent.com/bimfolder/Revit-Toolkit/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py"
             V_curr = requests.get(S_curr)
             if V_curr.status_code == 200:
                 lines = V_curr.text.splitlines()

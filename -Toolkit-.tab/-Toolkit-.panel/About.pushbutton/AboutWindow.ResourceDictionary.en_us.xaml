@@ -5,4 +5,5 @@
 
     <system:String x:Key="pyRevit.Title">Toolkit</system:String>
     <system:String x:Key="Button.Wiki">BIMFolder.com</system:String>
+    <system:String x:Key="Button.Wiki2">Check For Updates</system:String>
 </ResourceDictionary>

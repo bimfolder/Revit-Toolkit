@@ -9,7 +9,7 @@ class AboutWindow(forms.WPFWindow):
         self.copyright_tb.Text = '© 2024 BIMFolder Services'
     def openwiki(self, sender, args):
         script.open_url('https://www.bimfolder.com')
-    def openyoutubechannel(self, sender, args):
+    def openupd(self, sender, args):
         script.open_url ('https://www.youtube.com/channel/UC5ORVWjUKiMf2qQ9RgYzVyQ')
     def handleclick(self, sender, args):
         self.Close()

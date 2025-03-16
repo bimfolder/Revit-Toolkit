@@ -4,6 +4,6 @@
     xmlns:system="clr-namespace:System;assembly=mscorlib">
 
     <system:String x:Key="pyRevit.Title">Toolkit</system:String>
-    <system:String x:Key="Button.Wiki">www.BIMFolder.com</system:String>
+    <system:String x:Key="Button.Wiki">BIMFolder.com</system:String>
     <system:String x:Key="Button.upd">Update Checker</system:String>
 </ResourceDictionary>

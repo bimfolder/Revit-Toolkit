@@ -230,7 +230,7 @@
                            Text="{DynamicResource pyRevit.Engine}"/>
                 <WrapPanel Margin="0,15,0,0" HorizontalAlignment="Center">
                     <Button Content="{DynamicResource Button.Wiki}" FontSize="14" Click="openwiki"/>
-                    <Button Content="{DynamicResource Button.Wiki2}" FontSize="14" Click="openwiki"/>
+                    <Button Content="{DynamicResource Button.upd}" FontSize="14" Click="openwiki"/>
                 </WrapPanel>
                 <TextBlock x:Name="copyright_tb"
                            FontSize="12"

@@ -168,7 +168,7 @@ if UID != "":
             Refresh_Tools()
         def run_Button2(self, sender, args):
             window.Close ()
-            timestamp = int(time.time()) + random.randint(0, 1000)
+            timestamp = str(int(time.time()) + random.randint(0, 1000))
             S_curr = "https://raw.githubusercontent.com/bimfolder/Revit-Toolkit/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py?timestamp=" + timestamp
             V_curr = requests.get(S_curr)
             if V_curr.status_code == 200:

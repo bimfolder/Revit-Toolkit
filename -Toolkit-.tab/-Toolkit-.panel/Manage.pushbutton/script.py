@@ -7,6 +7,7 @@ clr.AddReference('PresentationCore')
 clr.AddReference('WindowsBase')
 from pyrevit import forms, revit, script
 from pyrevit.loader import sessionmgr
+import time, random
 
 def Update_Toolkit_Panel():
     Local_panel = os.environ.get("USERPROFILE") + "\\AppData\\Roaming\\pyRevit\\Extensions\\BIMFolder.extension\\-Toolkit-.tab\\-Toolkit-.panel"
@@ -167,7 +168,8 @@ if UID != "":
             Refresh_Tools()
         def run_Button2(self, sender, args):
             window.Close ()
-            S_curr = "https://raw.githubusercontent.com/bimfolder/Revit-Toolkit/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py"
+            timestamp = int(time.time()) + random.randint(0, 1000)
+            S_curr = "https://raw.githubusercontent.com/bimfolder/Revit-Toolkit/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py?timestamp=" + timestamp
             V_curr = requests.get(S_curr)
             if V_curr.status_code == 200:
                 lines = V_curr.text.splitlines()

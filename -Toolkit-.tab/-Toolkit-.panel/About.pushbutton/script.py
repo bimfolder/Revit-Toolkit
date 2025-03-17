@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from pyrevit import forms, script
-from pyrevit.loader import sessionmgr
 class AboutWindow(forms.WPFWindow):
     def __init__(self, xaml_file_name):
         forms.WPFWindow.__init__(self, xaml_file_name)
@@ -44,7 +43,6 @@ class AboutWindow(forms.WPFWindow):
             )
             if response == "Upgrade to the latest version":
                 subprocess.call(["pyrevit", "extensions", "update", "BIMFolder"])
-                sessionmgr.reload_pyrevit()
                 forms.alert("Toolkit has been updated to the latest version.", title="Update Complete", exitscript=False)
             else:
                 sys.exit()

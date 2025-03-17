@@ -45,6 +45,7 @@ class AboutWindow(forms.WPFWindow):
             if response == "Upgrade to the latest version":
                 subprocess.call(["pyrevit", "extensions", "update", "BIMFolder"])
                 forms.alert("Toolkit has been updated to the latest version.", title="Update Complete", exitscript=False)
+                sessionmgr.reload_pyrevit()
             else:
                 sys.exit()
     def handleclick(self, sender, args):

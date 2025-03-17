@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
+import time, random, requests, re, os, sys, shutil, subprocess
 from pyrevit import forms, script
+from pyrevit.loader import sessionmgr
 class AboutWindow(forms.WPFWindow):
     def __init__(self, xaml_file_name):
         forms.WPFWindow.__init__(self, xaml_file_name)
@@ -10,8 +12,7 @@ class AboutWindow(forms.WPFWindow):
     def openwiki(self, sender, args):
         script.open_url('https://www.bimfolder.com')
     def openupd(self, sender, args):
-        import time, random, requests, re, os, sys, shutil, subprocess
-        self.Close()
+         self.Close()
         timestamp = str(int(time.time()) + random.randint(0, 1000))
         S_curr = "https://raw.githubusercontent.com/bimfolder/Revit-Toolkit/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py?timestamp=" + timestamp
         V_curr = requests.get(S_curr)
@@ -43,6 +44,7 @@ class AboutWindow(forms.WPFWindow):
             )
             if response == "Upgrade to the latest version":
                 subprocess.call(["pyrevit", "extensions", "update", "BIMFolder"])
+                sessionmgr.reload_pyrevit()
                 forms.alert("Toolkit has been updated to the latest version.", title="Update Complete", exitscript=False)
             else:
                 sys.exit()

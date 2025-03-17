@@ -11,6 +11,7 @@ class AboutWindow(forms.WPFWindow):
         script.open_url('https://www.bimfolder.com')
     def openupd(self, sender, args):
         import time, random, requests, re, os, sys, shutil, subprocess
+        from pyrevit.loader import sessionmgr
         self.Close()
         timestamp = str(int(time.time()) + random.randint(0, 1000))
         S_curr = "https://raw.githubusercontent.com/bimfolder/Revit-Toolkit/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py?timestamp=" + timestamp

@@ -11,6 +11,7 @@ class AboutWindow(forms.WPFWindow):
         script.open_url('https://www.bimfolder.com')
     def openupd(self, sender, args):
         import time, random, requests, re, os, sys, shutil
+        self.Close()
         timestamp = str(int(time.time()) + random.randint(0, 1000))
         S_curr = "https://raw.githubusercontent.com/bimfolder/Revit-Toolkit/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py?timestamp=" + timestamp
         V_curr = requests.get(S_curr)
@@ -31,20 +32,7 @@ class AboutWindow(forms.WPFWindow):
             if match:
                 V_loc = match.group(1)
         if V_loc == V_cur:
-            response = forms.alert(
-                "You're running the latest version of App (" + V_cur + ")",
-                exitscript=False,
-                options=["Refresh All Installed Tools", "Exit Without Action"],
-                warn_icon=False
-            )
-            if response == "Refresh All Installed Tools":
-                Folder_Tools = os.environ.get("USERPROFILE") + "\\AppData\\Roaming\\pyRevit\\Extensions\\BIMFolder.extension\\Tools"
-                if os.path.exists(Folder_Tools) and os.path.isdir(Folder_Tools):
-                    shutil.rmtree(Folder_Tools)
-                os.makedirs(Folder_Tools)
-                Refresh_Tools()
-            elif response == "Exit Without Action":
-                sys.exit()
+            forms.alert("You have the latest version installed.", exitscript=False)
         else:
             response = forms.alert(
                 "               A new version (" + V_cur +") is available. \n       The currently installed  version is (" + V_loc +").",

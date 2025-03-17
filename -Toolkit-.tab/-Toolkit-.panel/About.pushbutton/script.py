@@ -32,7 +32,7 @@ class AboutWindow(forms.WPFWindow):
             if match:
                 V_loc = match.group(1)
         if V_loc == V_cur:
-            forms.alert("You have the latest version installed.", exitscript=False)
+            forms.alert("You have the latest version installed.", title="Update Checker", warn_icon=False, exitscript=False)
         else:
             response = forms.alert(
                 "               A new version (" + V_cur +") is available. \n       The currently installed  version is (" + V_loc +").",

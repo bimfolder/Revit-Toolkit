@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import time, random, requests, re, os, sys, shutil, subprocess
 from pyrevit import forms, script
 from pyrevit.loader import sessionmgr
 class AboutWindow(forms.WPFWindow):
@@ -12,7 +11,8 @@ class AboutWindow(forms.WPFWindow):
     def openwiki(self, sender, args):
         script.open_url('https://www.bimfolder.com')
     def openupd(self, sender, args):
-         self.Close()
+        import time, random, requests, re, os, sys, shutil, subprocess
+        self.Close()
         timestamp = str(int(time.time()) + random.randint(0, 1000))
         S_curr = "https://raw.githubusercontent.com/bimfolder/Revit-Toolkit/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py?timestamp=" + timestamp
         V_curr = requests.get(S_curr)

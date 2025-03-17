@@ -10,7 +10,7 @@ class AboutWindow(forms.WPFWindow):
     def openwiki(self, sender, args):
         script.open_url('https://www.bimfolder.com')
     def openupd(self, sender, args):
-        import time, random
+        import time, random, requests
         timestamp = str(int(time.time()) + random.randint(0, 1000))
         S_curr = "https://raw.githubusercontent.com/bimfolder/Revit-Toolkit/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py?timestamp=" + timestamp
         V_curr = requests.get(S_curr)

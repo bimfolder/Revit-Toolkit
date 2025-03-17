@@ -10,7 +10,7 @@ class AboutWindow(forms.WPFWindow):
     def openwiki(self, sender, args):
         script.open_url('https://www.bimfolder.com')
     def openupd(self, sender, args):
-        import time, random, requests, re, os, sys, shutil
+        import time, random, requests, re, os, sys, shutil, subprocess
         self.Close()
         timestamp = str(int(time.time()) + random.randint(0, 1000))
         S_curr = "https://raw.githubusercontent.com/bimfolder/Revit-Toolkit/main/-Toolkit-.tab/-Toolkit-.panel/About.pushbutton/script.py?timestamp=" + timestamp
@@ -36,18 +36,15 @@ class AboutWindow(forms.WPFWindow):
         else:
             response = forms.alert(
                 "               A new version (" + V_cur +") is available. \n       The currently installed  version is (" + V_loc +").",
+                title="Update Checker",
                 exitscript=False,
                 options=["Upgrade to the latest version", "Exit Without Action"],
                 warn_icon=False
             )
             if response == "Upgrade to the latest version":
-                Upgrade_App(V_loc, V_cur)
-                Folder_Tools = os.environ.get("USERPROFILE") + "\\AppData\\Roaming\\pyRevit\\Extensions\\BIMFolder.extension\\Tools"
-                if os.path.exists(Folder_Tools) and os.path.isdir(Folder_Tools):
-                    shutil.rmtree(Folder_Tools)
-                os.makedirs(Folder_Tools)
-                Refresh_Tools()
-            elif response == "Exit Without Action":
+                subprocess.call(["pyrevit", "extensions", "update", "BIMFolder"])
+                forms.alert("Toolkit has been updated to the latest version.", title="Update Complete", exitscript=False)
+            else response == "Exit Without Action":
                 sys.exit()
     def handleclick(self, sender, args):
         self.Close()

@@ -17,7 +17,7 @@
 <!-- Button-1 -->
         <Button x:Name="Button1" Grid.Row="0" Grid.Column="1"
                 Height="33" Width="160" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold" Margin="0,0,0,0"
-                Content="Rebuild My Tookit"
+                Content="Appy to My Ribbon"
                 ToolTip="Refresh the Revit ribbon to match the layout below.">
             <Button.Style>
                 <Style TargetType="Button">
@@ -43,7 +43,7 @@
 <!-- Button-2 -->
         <Button x:Name="Button2" Grid.Row="0" Grid.Column="2"
                 Height="33" Width="160" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold" Margin="0,0,0,0"
-                Content="Check For Updates"
+                Content="Check Updates for My Tools"
                 ToolTip="Ensure the most current version of the app and tools is installed and up to date.">
             <Button.Style>
                 <Style TargetType="Button">

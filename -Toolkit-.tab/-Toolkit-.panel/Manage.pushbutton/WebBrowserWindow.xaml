@@ -43,7 +43,7 @@
 <!-- Button-2 -->
         <Button x:Name="Button2" Grid.Row="0" Grid.Column="2"
                 Height="33" Width="160" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold" Margin="0,0,0,0"
-                Content="Check Updates for My Tools"
+                Content="Check Tool Updates"
                 ToolTip="Ensure the most current version of the app and tools is installed and up to date.">
             <Button.Style>
                 <Style TargetType="Button">

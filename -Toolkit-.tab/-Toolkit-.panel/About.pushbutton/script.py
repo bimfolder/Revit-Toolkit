@@ -37,12 +37,10 @@ class AboutWindow(forms.WPFWindow):
             response = forms.alert(
                 "               A new version (" + V_cur +") is available. \n       The currently installed  version is (" + V_loc +").",
                 exitscript=False,
-                options=["Upgrade App Only", "Upgrade App and Refresh Installed Tools", "Exit Without Action"],
+                options=["Upgrade to the latest version", "Exit Without Action"],
                 warn_icon=False
             )
-            if response == "Upgrade App Only":
-                Upgrade_App(V_loc, V_cur)
-            elif response == "Upgrade App and Refresh Installed Tools":
+            if response == "Upgrade to the latest version":
                 Upgrade_App(V_loc, V_cur)
                 Folder_Tools = os.environ.get("USERPROFILE") + "\\AppData\\Roaming\\pyRevit\\Extensions\\BIMFolder.extension\\Tools"
                 if os.path.exists(Folder_Tools) and os.path.isdir(Folder_Tools):
